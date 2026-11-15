@@ -1,0 +1,34 @@
+[project]
+name = "cost-per-correct"
+version = "0.1.0"
+description = "Compare model options by cost-per-correct answer, not cost-per-token"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "aidless" }]
+keywords = ["llm", "model-selection", "cost", "evaluation", "cost-per-token"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/aidless/cost-per-correct"
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.scripts]
+cost-per-correct = "costpercorrect.cli:main"
+
+[tool.pytest.ini_options]
+# src layout：不装包也能直接 `python3 -m pytest tests/ -q`（README 与 Makefile 都这么写）
+pythonpath = ["src"]
+testpaths = ["tests"]

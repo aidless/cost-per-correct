@@ -1,0 +1,26 @@
+[
+ {
+  "name": "base-awq-c1",
+  "price_in_per_1m": 0.0,
+  "price_out_per_1m": 0.441,
+  "tokens_in": 0,
+  "tokens_out": 540,
+  "accuracy": 0.125
+ },
+ {
+  "name": "base-awq-c16",
+  "price_in_per_1m": 0.0,
+  "price_out_per_1m": 0.043,
+  "tokens_in": 0,
+  "tokens_out": 540,
+  "accuracy": 0.125
+ },
+ {
+  "name": "lora-p1v2-c2",
+  "price_in_per_1m": 0.0,
+  "price_out_per_1m": 0.345,
+  "tokens_in": 0,
+  "tokens_out": 418,
+  "accuracy": 1.0
+ }
+]

@@ -1,0 +1,4 @@
+[
+  {"name": "frontier", "price_in_per_1m": 3.0, "price_out_per_1m": 15.0, "tokens_in": 8000, "tokens_out": 2000, "accuracy": 0.95},
+  {"name": "composite", "steps": [{"price_in_per_1m": 1.0, "price_out_per_1m": 2.0, "tokens_in": 1000, "tokens_out": 400, "accuracy": 0.9}, {"price_in_per_1m": 1.0, "price_out_per_1m": 2.0, "tokens_in": 500, "tokens_out": 100, "accuracy": 0.7}]}
+]
