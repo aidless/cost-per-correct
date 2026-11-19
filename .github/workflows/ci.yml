@@ -13,3 +13,4 @@ jobs:
           python-version: ${{ matrix.python }}
       - run: pip install -e . pytest
       - run: python3 -m pytest tests/ -q
+      - run: python scripts/check_readme.py  # README 数字漂移即 fail build

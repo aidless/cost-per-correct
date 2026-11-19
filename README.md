@@ -1,6 +1,8 @@
 # cost-per-correct
 
 把模型选型的记分牌从 **cost-per-token** 纠正为 **cost-per-correct**：便宜的错误输出是负资产，真正该比的是「每元买到多少正确答案」。
+> 本文档里的可复算数字由 `scripts/check_readme.py` 机检：README 漂移即 fail build（`--selftest` 含必红 + 必绿反证）。
+
 
 ## 为什么不是又一个省钱计算器
 
