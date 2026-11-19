@@ -1,0 +1,20 @@
+[
+  {
+    "name": "awq-c16-flag0",
+    "note": "VLLM_BATCH_INVARIANT=0（默认）；成本单位=GPU 分钟/1M output tokens；accuracy 语义=逐字节可复现接受度（1−分歧率 0.050），不是模型正确率",
+    "price_in_per_1m": 0.0,
+    "price_out_per_1m": 92.43,
+    "tokens_in": 0,
+    "tokens_out": 540,
+    "accuracy": 0.95
+  },
+  {
+    "name": "awq-c16-flag1",
+    "note": "VLLM_BATCH_INVARIANT=1；同一模型同一量化同一机器，只换解码 kernel 的归约顺序；分歧率 0/40",
+    "price_in_per_1m": 0.0,
+    "price_out_per_1m": 220.88,
+    "tokens_in": 0,
+    "tokens_out": 540,
+    "accuracy": 1.0
+  }
+]
