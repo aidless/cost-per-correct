@@ -1,0 +1,29 @@
+[
+  {
+    "name": "base-awq-c16-flag0",
+    "note": "底模 Qwen3-4B-AWQ，VLLM_BATCH_INVARIANT=0，c=16；成本单位=GPU 分钟/1M output tokens（实测吞吐 180.33 tok/s 折 92.42）；accuracy=任务口径 evd 0.125（离线评测 paper_agent/reports/eval_3way_v2.json base/gen/evd），不是分歧率",
+    "price_in_per_1m": 0.0,
+    "price_out_per_1m": 92.42,
+    "tokens_in": 0,
+    "tokens_out": 540,
+    "accuracy": 0.125
+  },
+  {
+    "name": "base-awq-c16-flag1",
+    "note": "同上但开确定性 kernel；吞吐 75.46 tok/s 折 220.87（确定性税 2.39×）；accuracy 仍是任务口径 0.125 —— 确定性买不到正确率",
+    "price_in_per_1m": 0.0,
+    "price_out_per_1m": 220.87,
+    "tokens_in": 0,
+    "tokens_out": 540,
+    "accuracy": 0.125
+  },
+  {
+    "name": "lora-p1v2-c16-flag1",
+    "note": "同一底模挂 QLoRA adapter p1v2 + 确定性 kernel + c=16（交叉格实测 2026-11-19）；吞吐 60.89 tok/s 折 273.72（比 flag1 底模再贵 1.24×）；accuracy=任务口径 evd 1.0（同文件 ckpt_final/gen/evd）",
+    "price_in_per_1m": 0.0,
+    "price_out_per_1m": 273.72,
+    "tokens_in": 0,
+    "tokens_out": 540,
+    "accuracy": 1.0
+  }
+]
