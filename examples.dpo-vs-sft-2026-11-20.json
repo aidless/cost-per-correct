@@ -10,7 +10,7 @@
   },
   {
     "name": "sft-p1v2-adapter",
-    "note": "SFT adapter checkpoint-136。与 DPO adapter 逐字节同结构（r=32 alpha=16 七层 264308896 B）→ 单价相同 273.72。tokens_out=308（40 条平均长度）。accuracy=三合一合规 17/40=0.425（eval_3way_p2_ng40.json 逐条重算）",
+    "note": "SFT adapter checkpoint-136。与 DPO adapter 逐字节同结构（r=32 alpha=16 七层 264308896 B）→ 单价相同 273.72。tokens_out=308（40 条平均长度）。accuracy=三合一合规 17/40=0.425（eval_3way_p2_ng40.json 逐条重算） 【跨 seed 边界】seed123 上 SFT 合规反升到 0.550、tokens 307 → 每正确 0.152786，反超 DPO 1.20×。本档是 seed42 单样本读数，不是稳健结论。",
     "price_in_per_1m": 0.0,
     "price_out_per_1m": 273.72,
     "tokens_in": 0,
@@ -19,7 +19,7 @@
   },
   {
     "name": "dpo-p2-adapter",
-    "note": "DPO adapter p2。单价同 273.72。tokens_out=311（40 条平均长度）。accuracy=三合一合规 20/40=0.50。注意：8 条时 acc=0.625、d2 领先 0.05，扩到 40 条后 d2 被 SFT 反超，优势缩小——本案例以 40 条为准",
+    "note": "DPO adapter p2。单价同 273.72。tokens_out=311（40 条平均长度）。accuracy=三合一合规 20/40=0.50。注意：8 条时 acc=0.625、d2 领先 0.05，扩到 40 条后 d2 被 SFT 反超，优势缩小——本案例以 40 条为准 【跨 seed 边界】seed123 上 DPO 合规降到 0.475、tokens 319 → 每正确 0.183825，反被 SFT 超。跨两个 seed winner 反转（seed42 DPO 1.17× / seed123 SFT 1.20×），本档 1.17× 只代表 seed42。",
     "price_in_per_1m": 0.0,
     "price_out_per_1m": 273.72,
     "tokens_in": 0,
