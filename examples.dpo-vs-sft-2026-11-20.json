@@ -1,0 +1,29 @@
+[
+  {
+    "name": "base-awq-c16-flag1",
+    "note": "底模 Qwen3-4B-AWQ，确定性 kernel + c=16。推理单价 273.72 GPU分钟/1M out tok（实测吞吐 60.89 tok/s 折算，来源 ttftkit verdict-queries40-lora.md）。accuracy=本轮 bf16 三方评测里 base 的『三合一合规率』=0/8：既要有证据、又要无循环复读、又要阶段符合。0 → 不可判（unavailable），完全不达标谈不上每正确成本",
+    "price_in_per_1m": 0.0,
+    "price_out_per_1m": 273.72,
+    "tokens_in": 0,
+    "tokens_out": 603,
+    "accuracy": 0.0
+  },
+  {
+    "name": "sft-p1v2-adapter",
+    "note": "SFT adapter checkpoint-136。与 DPO adapter 逐字节同结构（r=32 alpha=16 七层 264308896 B）→ 推理单价与 DPO 完全相同 273.72。tokens_out=282（本轮 bf16 评测 SFT 平均长度）。accuracy=三合一合规 2/8=0.25（eval_3way_p2.json gen_detail 逐条重算）",
+    "price_in_per_1m": 0.0,
+    "price_out_per_1m": 273.72,
+    "tokens_in": 0,
+    "tokens_out": 282,
+    "accuracy": 0.25
+  },
+  {
+    "name": "dpo-p2-adapter",
+    "note": "DPO adapter p2。推理单价同 SFT 273.72（结构逐字节相同）。tokens_out=303（本轮平均长度）。accuracy=三合一合规 5/8=0.625：DPO 的增益全在循环复读从 6/8 降到 3/8，单看 evd 它与 SFT 持平（都 0.75），看不出来。来源 paper_agent/reports/eval_3way_p2.json",
+    "price_in_per_1m": 0.0,
+    "price_out_per_1m": 273.72,
+    "tokens_in": 0,
+    "tokens_out": 303,
+    "accuracy": 0.625
+  }
+]
